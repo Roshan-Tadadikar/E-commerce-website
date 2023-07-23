@@ -14,6 +14,8 @@ const ContextProvider = ({children}) => {
               return {...state,cartValues:state.cartValues.splice(state.cartValues.indexOf(action.cartItem))}
               case "ACTIONS.REMOVEFROMWISHLISTS":
               return {...state,wishListValues:state.wishListValues.splice(state.wishListValues.indexOf(action.listItem))}
+              case "ACTIONS.SEARCH":
+                return {...state, search:action.payload}
               default:
                 return {state}
       }
@@ -23,7 +25,7 @@ const ContextProvider = ({children}) => {
 
 
 
-    const[state,dispatch] = useReducer(handleContextData,{ cartValues:[], wishListValues:[]})
+    const[state,dispatch] = useReducer(handleContextData,{ cartValues:[], wishListValues:[],search:""})
 
 
     const [isUserLoggedIn,setUserLogin] = useState(false);
@@ -49,6 +51,10 @@ const ContextProvider = ({children}) => {
       dispatch({type:"ACTIONS.REMOVEFROMWISHLISTS", listItem:ele})
     }
 
+    const searchChange=(ele)=>{
+      dispatch({type:"ACTIONS.SEARCH", payload:ele})
+    }
+
 
     const allValues={
       authentication:{
@@ -67,9 +73,10 @@ const ContextProvider = ({children}) => {
         addToWishList:addToWishList,
         removeFromWishList:removeFromWishList
     },
-    user:{
-
-    }
+      search:{
+        val:state.search,
+        action:searchChange
+      }
   }
   return (
     <ProvideContext.Provider value={{allValues}}>{children}</ProvideContext.Provider>

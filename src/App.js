@@ -11,6 +11,7 @@ import { Cart } from "./Components/Cart";
 import toast, { Toaster } from 'react-hot-toast';
 import WishList from "./Components/WishList";
 import Signup from "./Components/Signup";
+import IndividualPage from "./Components/IndividualPage";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/mockman" element={<Mockman/>} />
             <Route path="/" element={<Home/>} />
+            <Route path="/individualPage" element={<IndividualPage/>}/>
             <Route path="/product" element={<Product />}/>
             <Route path="/cart" element={<RequiresAuth >{<Cart/>} </RequiresAuth>} />
             <Route path="/wishList" element={<RequiresAuth >{<WishList/>}</RequiresAuth>} />

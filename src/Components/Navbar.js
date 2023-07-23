@@ -26,9 +26,13 @@ export const Navbar = () => {
 
   let navigate = useNavigate(); 
   const goToProduct=()=>{
+    
     navigate("/product")
   }
 
+  const handleSearch=(val)=>{
+    allValues.search.action(val)
+  }
 
   useEffect(()=>{
     window.addEventListener('scroll', handleNavbar)
@@ -37,7 +41,7 @@ export const Navbar = () => {
     <div id="parent" className={navbar?"scrolled":""}>
        <Link style={{textDecoration:"none", color:"black"}} to="/"><li style={{fontSize:"1rem"}}>SNEAKERS</li></Link>
         <div id='newchild'>
-         <li ><input style={{width:"80px", borderRadius:"20px", paddingLeft:"10px"}} placeholder='search' onClick={goToProduct} id="search" /></li>
+         <li ><input style={{width:"80px", borderRadius:"20px", paddingLeft:"10px"}} placeholder='search' onClick={goToProduct} onChange={(e)=>handleSearch(e.target.value)} id="search" /></li>
         <Link style={{textDecoration:"none", color:"black"}} to="/product"> EXPLORE</Link>
         <Link style={{textDecoration:"none", color:"black"}} to="/login"> <li><BiUser size={'15px'}  /></li></Link>
         <Link style={{textDecoration:"none", color:"black"}} to="/cart"><li><RiShoppingCart2Line size={'15px'} /><sup style={{color:"red"}}>{Object.keys(allValues.cart.values).length>0?Object.keys(allValues.cart.values).length:""}</sup></li></Link>

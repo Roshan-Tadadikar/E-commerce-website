@@ -10,7 +10,7 @@ const RequiresAuth = ({children}) => {
   const location = useLocation()
     const{allValues} = useContext(ProvideContext)
   console.log("here in requiresAuth  "+allValues.authentication.isUserLoggedIn)
-  return allValues.authentication.isUserLoggedIn?children:<Navigate to="/login" state={{from:location}}/>
+  return  localStorage.getItem("encodedToken")==undefined?<Navigate to="/login" state={{from:location}}/>:children
   
 }
 

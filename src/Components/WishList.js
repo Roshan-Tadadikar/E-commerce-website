@@ -50,7 +50,7 @@ const WishList = () => {
           if(response.ok){
             console.log("Response  -->"+ JSON.stringify(response))
             allValues.wishList.removeFromWishList(ele)
-            data.splice(data.indexOf(ele))
+            setData(data.filter(item=>item._id!=ele._id))
             toast.success('Successfully toasted!')
           }
       }catch(e){
@@ -92,7 +92,7 @@ const WishList = () => {
         
         <Navbar/>
         <div>
-        <h4>My Cart</h4>
+        <h4>My WishList</h4>
         <div className='productCardParent'>
         {
             Loading?

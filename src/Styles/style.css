@@ -46,6 +46,7 @@ body{
   width: 100%;
   display: flex;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .field input{
@@ -144,6 +145,50 @@ body{
   text-decoration: underline;
 }
 
+
+.container{
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.signup-form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-group button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+.form-group button:hover {
+  background-color: #0056b3;
+}
 
 
 
@@ -685,6 +730,7 @@ body{
 
 .secondBox{
   margin-top: 25px;
+  display: flex;
 }
 
 .thirdBox span{
@@ -752,20 +798,124 @@ body{
 }
 
 
+.IpContainer{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: auto;
+  padding: 1rem;
+  margin-top:4rem;
+}
+
+.IpContainer button:hover{
+  background-color: black;
+  color: white;
+}
 
 
 
+.ipPage{
+  margin-left: 120px;
+  margin-top: 100px;
+}
 
 
+.address{
+  padding: 1rem;
+  box-shadow: 5px 10px #888888
+}
+
+.addChild{
+  width: 200px;
+  padding: 1rem;
+  margin: auto;
+}
+
+.addChild button{
+  padding: 0.5rem;
+  background-color: indigo;
+  font-weight: bold;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.addChild button:hover{
+  background-color: rgb(133, 91, 164);
+}
+
+.addressButton{
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addressButton:hover{
+  background-color: rgb(156, 130, 130);
+}
+
+.addressModal{
+    margin: auto;
+    margin-left: 200px;
+  box-shadow: 5px 10px #888888;
+  padding: 1rem;
+  height: 230px;
+  background-color: #000;
+  color: white;
+}
 
 
+.addressModal input{
+  padding: 4px;
+}
 
 
+.addressModal button{
+margin-bottom:5px;
+border: none;
+background-color: blueviolet;
+border-radius: 4px;
+color: white;
+padding: 0.25rem;
+cursor: pointer;
+font-weight: bold;
+}
 
 
+.checkoutmodal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent background with 50% opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure the modal appears above other elements */
+}
 
+/* Modal Content */
+.checkoutmodal-content {
+  background-color: #fff; /* White background for the modal */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 400px; /* Set a maximum width for the modal content */
+}
 
-
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
 
 
 
@@ -846,6 +996,7 @@ body {
   .prodCard{
     width: 200px;
     height: 300px;
+    text-decoration: none;
   }
 
   .prodCard h4{
@@ -926,6 +1077,14 @@ body {
   width: 600px;
 }
 
+
+.IpContainer img{
+  width: 200px;
+}
+
+.ipPage{
+  margin-left: 600px;
+}
 
 }
 
